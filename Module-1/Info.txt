@@ -28,6 +28,7 @@ Element:-
 
     2.Block level element:-
     ->By default width of the of block level element is full width of the screen
+    height is as per the content.
     ->p, br, blockquote, div, h1 to h6, li
 -------------------------------------------------------------------
 Attribute:-
