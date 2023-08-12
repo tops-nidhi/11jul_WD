@@ -1,4 +1,4 @@
-step:1 cd -directery
+step:1 cd -directory
 step:2 git init
 step:3 git remote add origin (link)
 step:4 git add .
