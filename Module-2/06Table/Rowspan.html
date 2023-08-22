@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RowSpan</title>
+    <style>
+        table, tr{
+            border: 1px solid cornflowerblue;
+            /* border-width: ; */
+            /* border-style: solid, ridge, groove, inset, outset, double, dotted, solid, dashed; */
+            /* border-color: ; */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Data</caption>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Per</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Alpa</td>
+            <!-- rowspan attribute is use to merge the row-->
+            <td rowspan="2">83%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jalpa</td>
+            <!-- <td>83%</td>    -->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Kalpa</td>
+            <td>100%</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Kajal</td>
+            <td>90%</td>
+        </tr>
+    </table>
+</body>
+
+</html>
