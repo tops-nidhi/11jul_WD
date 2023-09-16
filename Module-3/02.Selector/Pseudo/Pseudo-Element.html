@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pseudo Class</title>
+    <title>Pseudo Element</title>
     <style>
-        *{
-            box-sizing: border-box;
+        div{
+            height: auto;
+            width: 100%;
+            border: 1px solid red;
+            padding: 50px 10px 30px 0px;
+            padding: 30px 100px;
+
         }
-        .div{
-            height: 120px;
-            width: 120px;
-            background: #ebf;
-            transition: 1s;            
+        div p{
+            font-family: Arial, Helvetica, sans-serif;
         }
-        
-        .div:hover{
-            border: 10px solid red;
-            background: #55ee;
+        div p::first-letter{
+            font-size: 32px !important;
         }
-        a:active{
-            color: green;
-        } 
-        a:link{
-            color: #000;
+        div p::first-line{
+            color: blue;
         }
-        a:visited{
-            color: yellow
+        ::selection{
+            background: lightgray;
+            color: coral;
+        }
+        div p::before{
+            content:"hello";
+            /* color: red;
+            border: 1px solid red; */
+            margin: 50px;
+
+        }
+        div p::after{
+            content:"";
+            color: red;
+            border: 1px solid red;
         }
     </style>
 </head>
+
 <body>
-    <div class="div"></div>
-    <p>Class select using period '.'</p>
-    <p>Id select using '#'</p>
-    <p>pseudo element select using single colon':'</p>
-    <a href="#">Link </a>
+    <div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam excepturi iusto, tempora dolorem porro ex
+            eligendi quos aliquid veniam sed facere debitis quae mollitia temporibus tempore provident. Tenetur,
+
+        </p>
+    </div>
 </body>
+
 </html>
