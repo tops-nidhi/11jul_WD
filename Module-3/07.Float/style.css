@@ -32,6 +32,7 @@
 .info .data .data-img img{
     height: 80%;
     width: 100%;
+    filter: grayscale(100%);
 }
 .info .data .data-img button{
     height: 20%;
