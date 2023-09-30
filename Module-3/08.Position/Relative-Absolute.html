@@ -1,0 +1,52 @@
+<!-- Relative is used for the parent and absolute is used for the child using relative absolute we can set the every child inside the parent position. by default every child is absolute with the body if there's no position relative. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative-Absolute</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* border: 2px solid red; */
+        }
+        .banner{
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+        .banner .ban{
+            height: inherit;
+            width: inherit;
+            position: absolute;
+        }
+        .banner .ban-img img{
+            height: 100%;
+            width: 100%;
+            filter: brightness(40%) ;
+        }
+        .banner .ban-info{
+            font-size: 20px;
+            color: #fff;
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <!-- Relative -->
+    <div class="banner">
+        <div class="ban ban-img">
+            <img src="https://cdn.shopify.com/s/files/1/0348/5240/5379/files/DSC05479_07477d36-0f24-484a-966c-f721ca058084.jpg?v=1591133848" alt="">
+        </div>
+        <div class="ban ban-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellendus voluptatibus impedit ex, sit repellat, quis iusto sed minus odio iste aliquid quidem odit ullam doloribus, cupiditate ipsum eius est? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, veniam laboriosam culpa dolorem quisquam illum velit minus explicabo, quis quo deleniti et excepturi assumenda ipsam. Cum, illo accusamus exercitationem est inventore culpa quisquam aut corrupti qui vel neque libero? Magni cum esse consectetur commodi quasi sed quo sequi dicta doloremque!</p>
+        </div>
+    </div>
+</body>
+</html>
