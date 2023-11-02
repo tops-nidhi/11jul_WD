@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .container {
+            height: 500px;
+            width: 50%;
+            margin: auto;
+            /* border: 1px solid red; */
+            position: relative;
+        }
+        .container .box{
+            height: inherit;
+            width: 100%;
+            position: absolute;
+            transition:2.5s;
+            backface-visibility: hidden;
+        }
+        .container .box img{
+            height: 100%;
+            width: 100%;
+        }
+        .container .b-1{
+            transform: rotateY(180deg);
+        }
+        .container .b-2{
+            transform: rotateY(0deg);
+        }
+        .container:hover .b-1{
+            transform: rotateY(0deg);
+        }
+        .container:hover .b-2{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box b-1">
+            <img src="https://i.pinimg.com/originals/15/c3/a4/15c3a465c648a162a0dd1c8d1856d5f6.jpg" alt="">
+        </div>
+        <div class="box b-2">
+            <img src="https://i.pinimg.com/originals/15/c3/a4/15c3a465c648a162a0dd1c8d1856d5f6.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
