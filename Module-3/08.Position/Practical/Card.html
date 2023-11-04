@@ -8,14 +8,58 @@
         .card {
             width: 50%;
             height: 350px;
-            margin: auto;
+            margin: 250px auto;
+            /* border: 3px solid red; */
+            /* background-image: url('https://wallup.net/wp-content/uploads/2016/01/200876-nature-landscape-water.jpg');
+            background-size: 100% 100%;
+            background-position: 40%;
+            background-repeat: no-repeat; */
+            position: relative;
+            overflow: hidden;
+            transition: 1.4s;
+        }
+        img{
+            height: 140%;
+            width: 140%;
+            position: absolute;
+            top: -40%;
+            left: -40%;
+            transition: 1.4s;
+        }
+        .card:hover img{
+            left: 0%;
+            top: 0;
+        }
+        .card .item{
+            width: 100%;
+            height: inherit;
+            background: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            transition: 1.4s;
+        }
+        .card .i-1{
+            top: 100%;
+            right: 100%;
+        }
+        .card .i-2{
+            bottom: 100%;
+            left: 100%;
+        }
+        .card:hover .i-1{
+            top: 0;
+            right: 0;
+        }
+        .card:hover .i-2{
+            bottom: 0;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="item i-1"></div>
-        <div class="item i-2"></div>
+        <img src="https://wallup.net/wp-content/uploads/2016/01/200876-nature-landscape-water.jpg" alt="">
+        <!-- <div class="item i-1"></div>
+        <div class="item i-2"></div> -->
     </div>
 </body>
 </html>
