@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical</title>
+</head>
+<body>
+
+    <div>
+        Value 1: <input type="text" id="inp1"><br><br>
+        Value 2: <input type="password" id="inp2"><br><br>
+        <button type="button" onclick="Data()">Get Value</button>
+        <p id="ans"></p>
+
+    </div>
+    <script>
+        let inp1, inp2, p;
+        function Data(){
+            inp1 = document.getElementById('inp1');
+            inp2 = document.getElementById('inp2');
+            p = document.getElementById('ans');
+            // console.log(parseInt(inp1.value) + parseInt(inp2.value)); 
+            p.innerHTML = "<b>Hello world!</b>";
+            inp1.value = "52";
+            inp1.style.caretColor = "red";
+            inp1.style.color = "red";
+            if(inp2.type == "password")
+            {inp2.type = "text"}
+            else{inp2.type = "password"}
+        }
+        // Data();
+    </script>
+</body>
+</html>
