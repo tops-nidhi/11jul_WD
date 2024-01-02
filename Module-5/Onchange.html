@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnChange</title>
+</head>
+<body>
+    <div style="height: 250px; width: 250px; border: 1px solid red;" id="div"></div>
+    <select name="color" id="color" onchange="color1()">
+        <option value="red">Red</option>
+        <option value="green">Red</option>
+        <option value="blue">Red</option>
+        <option value="coral">Red</option>
+    </select>
+
+    <script>
+        let d = document.getElementById("div")
+        let color = document.getElementById("color")
+        function color1()
+        {
+            d.style.backgroundColor = color.value;
+            console.log(color.value);
+        }
+    </script>
+</body>
+</html>
