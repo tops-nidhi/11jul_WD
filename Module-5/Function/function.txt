@@ -24,3 +24,6 @@ Function:-
             // function_name
             return_statement
         }
+
+    v. Recursion
+        Function call it self
