@@ -1,0 +1,17 @@
+let btn = document.querySelectorAll('button');
+let inp = document.querySelector('input');
+for (const key in btn) {
+    // if (Object.hasOwnProperty.call(object, key)) {
+    //     const element = object[key];
+
+    // }
+    btn[key].addEventListener('click', function () {
+        if (btn[key].innerText == 'C') {
+            inp.value = '';
+        }
+        else {
+            text = btn[key].innerText;
+            inp.value += text;
+        }
+    })
+}
