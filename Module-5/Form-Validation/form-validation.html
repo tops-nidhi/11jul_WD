@@ -25,30 +25,31 @@
         <label for="password">Password:</label>
         <input type="password" name="password" id="password">
         <input type="submit" value="Submit">
-    </form>>
+    </form>
 
     <script>
 
-        let ptn = /^[A-Z a-z]{3,10}$/;
-        let noptn = /^[0-9]{10}$/;
-        let passptn = /^(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
         // Form validation
         function validate() {
-            let name = document.getElementById('name').value
-            let email = document.getElementById('email')
+            let ptn = /^[A-Z a-z]{3,5}$/;
+            let noptn = /^[0-9]{10}$/;
+            let passptn = /^(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email');
             let phone = document.getElementById('phone')
             let password = document.getElementById('password')
             console.log("Hello")
             // Name validation
             if (name == "" || name == ' ') {
-                alert('invalid')
                 name.style.outline = "1px solid red";
                 let msg = document.querySelector('#name~span')
                 msg.innerHTML = "*Need to add name"
                 return false;
             }
-            else if (ptn.test(name.value)) {
-                return false;
+            else if (!ptn.test(name)) {
+                alert('invalid')
+                name.style.outline = "1px solid red";
+                // return false;
             }
             // Email validation
             if (email.value == '' || email.value == ' ') {
@@ -58,7 +59,7 @@
             if (phone.value == '' || phone.value == ' ') {
                 return false;
             }
-            else if (!isNaN(phone.value)) {
+            else if (isNaN(phone.value)) {
                 return false;
             }
             else if (noptn.test(phone.value)) {
