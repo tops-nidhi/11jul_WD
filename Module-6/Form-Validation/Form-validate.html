@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validate</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required minlength="3">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $("form").validate({
+            rule:{
+                name:{
+                    required: true,
+                    minlength: 3
+                }
+            },
+            messages:{
+                name:{
+                    required: 'Need to fill this',
+                    minlength: 'Minimum 3 character required'
+                }
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>
